@@ -1,14 +1,16 @@
-import { Routes, Route } from 'react-router-dom'; // Removed BrowserRouter import
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import BirthdayWish from './components/BirthdayWish';
 import MembersPage from './components/MembersPage';
 import './App.css';
 
 function App() {
   return (
-    <Routes>
-      <Route path="/" element={<BirthdayWish />} />
-      <Route path="/members" element={<MembersPage />} />
-    </Routes>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<BirthdayWish />} />
+        <Route path="/members" element={<MembersPage />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
